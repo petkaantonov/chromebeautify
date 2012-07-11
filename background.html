@@ -1,0 +1,14 @@
+<script type="text/javascript">
+
+function menuClicked() {
+    chrome.tabs.getSelected(null, function(tab) {
+        chrome.tabs.sendRequest(tab.id, {action: "beautify"});
+    }); 
+}
+
+chrome.contextMenus.create({
+    'title': 'JS-Beautify',
+    'contexts': ['selection'],
+    'onclick': menuClicked
+});
+</script> 

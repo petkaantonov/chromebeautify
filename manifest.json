@@ -1,0 +1,16 @@
+{
+    "name": "Chrome JSBeautifier",
+    "version": "0.1",
+    "description": "JSBeautifies selection in place",
+    "background_page": "background.html",
+    "content_scripts": [ {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }],
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "contextMenus",
+        "tabs"
+    ]
+}
